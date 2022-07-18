@@ -5,6 +5,8 @@ public class Arithmaticcalculator
 {
 	public static void main(String[] args) {
 		
+		    char operator;
+		
 	        Scanner number = new Scanner(System.in);
 	        
 			System.out.println("Enter the number 1 :");
@@ -13,46 +15,51 @@ public class Arithmaticcalculator
 		    System.out.println("Enter the number 2 :");
 		    int b= number.nextInt();
 		    
-			while(true) {
-		    System.out.println("1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Modulo\n6. Exit");
-		   	System.out.println("Enter your operator to perform arithmetic calculation (1/2/3/4/5/6)?");
-		   	int operator=number.nextInt();
+		
+		   	System.out.println("Choose an operator to arthimetic calculation : +,-,*, /,or%");
+		   	operator = number.next().charAt(0);
+		   
 		   	
 		    switch(operator)
 		    	{
-		    	case 1:
+		    	case '+':
 		    		
-		    		System.out.println("Addition of two numbers:"+(a+b));
+		    		
+		    		System.out.println("Addition of two numbers is:"+(a+b));
 		    		break;
-		    	case 2:
 		    		
-		    		System.out.println("subtraction of two numbers:"+(a-b));
+		    	case '-':
+		    	
+		    		
+		    		System.out.println("subtraction of two numbers is:"+(a-b));
 		    		break;
-		    	case 3:
+		    	case '*':
 		    		
-		    		System.out.println("Multiplication of two numbers:"+(a*b));
+		    	
+		    		System.out.println("Multiplication of two numbers is:"+(a*b));
 		    		break;
-		    	case 4:
+		    	case '/':
 		    		
-		    		System.out.println("Division of two numbers:"+(a/b));
+		    	
+		    		System.out.println("Division of two numbers is:"+(a/b));
 		    		break;
-		    	case 5:
 		    		
-		    		System.out.println("Modulo of two numbers:"+(a%b));
+                case '%':
+                	
+                
+		    		System.out.println("Modulus of two numbers is:"+(a%b));
 		    		break;
 		    	
-		    	case 6:
-		    		System.exit(0);
+		    	
+		    		
+		        default:
+		    		System.out.println("Invalid operator");
 		    		
 		    	
 		    		
 		    	}
 			
 		}
-		
-	    	
-	    	
-	}
 }
 
 
